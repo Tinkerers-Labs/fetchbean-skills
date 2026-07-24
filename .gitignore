@@ -1,0 +1,3 @@
+# Per-install personalization: generated locally by each skill's "Personalize (once)" step from the
+# user's own connected account. Holds workspace-specific ids, names, and emails — never committed.
+skills/*/workspace.md
