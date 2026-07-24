@@ -1,0 +1,118 @@
+{
+  "repo": "Tinkerers-Labs/fetchbean-skills",
+  "count": 14,
+  "skills": [
+    {
+      "name": "fetchbean",
+      "description": "Use fetchbean when a task needs live external data the built-in tools can't get, or the user's own connected accounts. Read pages the built-in fetch fails on: x.com/Twitter, Reddit, LinkedIn, Instagram, JS-heavy SPAs, or anything that returned a 403 or bot interstitial. Run live search for recency-sensitive asks: latest, today, this week, just released, current price or status, or after a date. Act on the user's connected services phrased 'my <service>' (my GitHub, my Stripe, my Sentry, my Slack, my Cloudflare, my Supabase, and more), read or write, one key. The catalog is live: run GET https://api.fetchbean.com/discover?q=<task> before assuming a tool is missing. Also use when the user says fetchbean. Not for ordinary public pages or evergreen searches the built-in WebFetch or WebSearch already handle.",
+      "kind": "hub",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean/SKILL.md"
+    },
+    {
+      "name": "fetchbean-artifacts",
+      "description": "Publish a web page and get a shareable link, from any agent, through fetchbean. Use when the user wants to share a report, dashboard, chart, slides, landing page, write-up, or small interactive app as a URL a human can open in a browser — 'publish this', 'give me a shareable link', 'make a page/report/dashboard I can send', 'host this'. Works the same in Claude Code, Codex, Cursor, or any agent (unlike a host's built-in artifacts), because it's just a fetchbean API call. Needs only a fetchbean key — no connection or credential to set up.",
+      "kind": "capability",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-artifacts",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-artifacts/SKILL.md"
+    },
+    {
+      "name": "fetchbean-buffer",
+      "description": "Schedule and manage your Buffer social posts through fetchbean (one key, with your Buffer token held encrypted server-side instead of in config). Use when the user asks about their Buffer posts, social scheduling, publishing queue, channels/profiles, or post analytics, or says 'my Buffer' — for example queueing a post, scheduling to a channel, listing scheduled posts, or checking post performance. Requires connecting Buffer once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "buffer",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-buffer",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-buffer/SKILL.md"
+    },
+    {
+      "name": "fetchbean-canny",
+      "description": "Read and triage your Canny feedback through fetchbean (one key, with your Canny token held encrypted server-side instead of in config). Use when the user asks about their Canny boards, feature requests, bug reports, feedback, votes, roadmap, or changelog, or says 'my Canny' — for example listing top-voted requests, searching feedback, filing or updating a post, moving it along the roadmap, or publishing a changelog entry. Requires connecting Canny once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "canny",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-canny",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-canny/SKILL.md"
+    },
+    {
+      "name": "fetchbean-dodo",
+      "description": "Read and manage your Dodo Payments through fetchbean (one key, with your Dodo token held encrypted server-side instead of in config). Use when the user asks about their Dodo payments, subscriptions, customers, refunds, payouts, disputes, revenue, license keys, or checkout links, or says 'my Dodo' or 'my payments' — for example listing recent payments, refunding one, cancelling a subscription, checking payouts, or creating a payment link. Requires connecting Dodo once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "dodo",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-dodo",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-dodo/SKILL.md"
+    },
+    {
+      "name": "fetchbean-fireflies",
+      "description": "Access your Fireflies.ai meeting transcripts, summaries, action items, and soundbites through fetchbean (one key, with your Fireflies token held encrypted server-side instead of in config). Use when the user asks about their meetings, recordings, calls, transcripts, action items, or who said what, for example finding decisions from a call, pulling action items from a meeting, searching past meetings, or sharing a recording. Requires connecting Fireflies once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "fireflies",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-fireflies",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-fireflies/SKILL.md"
+    },
+    {
+      "name": "fetchbean-linear",
+      "description": "Work with your Linear issues, projects, and teams through fetchbean (one key, with your Linear token held encrypted server-side instead of in config). Use when the user asks about their Linear issues, tickets, bugs, projects, teams, sprints, or roadmap, or says 'my Linear' — for example listing issues assigned to me, searching tickets, checking a project's status, filing a bug, updating an issue's state, or commenting on one. Requires connecting Linear once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "linear",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-linear",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-linear/SKILL.md"
+    },
+    {
+      "name": "fetchbean-notion",
+      "description": "Read and write your Notion workspace through fetchbean (one key, connected by OAuth so no token lives in your config). Use when the user asks about their Notion pages, docs, databases, notes, or wiki, or says 'my Notion' — for example searching the workspace, reading a page as markdown, querying a database, creating a page, or appending content. Requires connecting Notion once in the fetchbean dashboard (one click, pick the pages to share); calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "notion",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-notion",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-notion/SKILL.md"
+    },
+    {
+      "name": "fetchbean-posthog",
+      "description": "Query your PostHog product analytics through fetchbean (one key, with your PostHog token held encrypted server-side instead of in config). Use when the user asks about their PostHog analytics, events, funnels, retention, feature flags, insights, dashboards, or error tracking, or says 'my analytics' or 'my HogQL' — for example running a HogQL query over events, checking a funnel, listing feature flags, or toggling a flag. Requires connecting PostHog once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "posthog",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-posthog",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-posthog/SKILL.md"
+    },
+    {
+      "name": "fetchbean-sentry",
+      "description": "Read and triage your Sentry errors through fetchbean (one key, with your Sentry token held encrypted server-side instead of in config). Use when the user asks about their Sentry issues, errors, exceptions, crashes, stacktraces, releases, or projects, or says 'my Sentry' or 'my errors' — for example listing unresolved issues, reading a stacktrace, resolving or assigning an issue, or checking recent releases. Requires connecting Sentry once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "sentry",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-sentry",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-sentry/SKILL.md"
+    },
+    {
+      "name": "fetchbean-spaceship",
+      "description": "Manage your Spaceship domains and DNS through fetchbean (one key, with your Spaceship credentials held encrypted server-side instead of in config). Use when the user asks about their domains, DNS records, nameservers, domain expiry or auto-renew, or domain availability, or says 'my domains' or 'my DNS' — for example listing domains, adding a DNS record, pointing a subdomain, checking when a domain expires, or seeing if a name is available. Requires connecting Spaceship once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "spaceship",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-spaceship",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-spaceship/SKILL.md"
+    },
+    {
+      "name": "fetchbean-stripe",
+      "description": "Read and manage your Stripe account through fetchbean (one key, with your Stripe token held encrypted server-side instead of in config). Use when the user asks about their Stripe payments, customers, subscriptions, invoices, charges, refunds, balance, payouts, disputes, or payment links, or says 'my Stripe' or 'my payments' — for example listing recent payments, checking the balance, refunding a charge, cancelling a subscription, or creating a payment link. Requires connecting Stripe once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "stripe",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-stripe",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-stripe/SKILL.md"
+    },
+    {
+      "name": "fetchbean-supabase",
+      "description": "Query and inspect your Supabase projects through fetchbean (one key, connected by OAuth so no token lives in your config). Use when the user asks about their Supabase database, projects, tables, rows, or logs, or says 'my Supabase' — for example running a SQL query, listing projects, or checking recent logs. Requires connecting Supabase once in the fetchbean dashboard (one click); calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "supabase",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-supabase",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-supabase/SKILL.md"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create a new fetchbean-backed agent skill for a service in the fetchbean catalog. Use when the user wants to wrap a service in a skill, add a skill for a provider fetchbean supports (e.g. 'make a fetchbean skill for Stripe', 'add a GitHub skill', 'wrap Sentry'), or grow the fetchbean-skills library. Pulls the live tool list from the catalog so the skill can't go stale, and follows the repo's conventions (triggering description, one-time setup, self-personalizing workspace cache, read/write tool lists, escape hatch).",
+      "kind": "meta",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill skill-creator",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/skill-creator/SKILL.md"
+    }
+  ]
+}

@@ -28,4 +28,6 @@ simpler one) and keep to these rules:
 
 Then open a PR. Keep each skill's body under ~150 lines — link to `discover`, don't dump the catalog.
 
+After adding, renaming, or removing a skill, regenerate the machine-readable index (`node scripts/build-index.mjs`) and commit `index.json` — the fetchbean API serves it at `GET /skills`.
+
 By contributing you agree your changes are MIT licensed (see [LICENSE](LICENSE)).
