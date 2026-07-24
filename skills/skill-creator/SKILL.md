@@ -1,5 +1,5 @@
 ---
-name: "fetchbean-skill-creator"
+name: "skill-creator"
 description: "Create a new fetchbean-backed agent skill for a service in the fetchbean catalog. Use when the user wants to wrap a service in a skill, add a skill for a provider fetchbean supports (e.g. 'make a fetchbean skill for Stripe', 'add a GitHub skill', 'wrap Sentry'), or grow the fetchbean-skills library. Pulls the live tool list from the catalog so the skill can't go stale, and follows the repo's conventions (triggering description, one-time setup, self-personalizing workspace cache, read/write tool lists, escape hatch)."
 ---
 

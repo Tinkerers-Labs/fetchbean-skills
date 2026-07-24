@@ -38,7 +38,7 @@ workspace on first use).
 | [fetchbean-sentry](skills/fetchbean-sentry) | Your Sentry — issues, stacktraces, releases, projects; resolve and assign |
 | [fetchbean-supabase](skills/fetchbean-supabase) | Your Supabase — run SQL, projects, logs (read-only by default) |
 | [fetchbean-artifacts](skills/fetchbean-artifacts) | Publish a report/dashboard/page and get a shareable URL — from any agent, no connection |
-| [fetchbean-skill-creator](skills/fetchbean-skill-creator) | Author a new fetchbean skill for any service in the catalog, from the live tool list |
+| [skill-creator](skills/skill-creator) | Author a new fetchbean skill for any service in the catalog, from the live tool list |
 
 More are added on demand — [request one](https://fetchbean.com/requests), or if a service is already
 [in the fetchbean catalog](https://fetchbean.com/catalog) you can reach it today via the
