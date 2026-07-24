@@ -31,6 +31,8 @@ workspace on first use).
 | [fetchbean-fireflies](skills/fetchbean-fireflies) | Your Fireflies meetings — transcripts, action items, soundbites, sharing |
 | [fetchbean-buffer](skills/fetchbean-buffer) | Your Buffer social scheduling — channels, queue, scheduled posts, analytics |
 | [fetchbean-dodo](skills/fetchbean-dodo) | Your Dodo Payments — payments, subscriptions, customers, refunds, payouts, checkout links |
+| [fetchbean-notion](skills/fetchbean-notion) | Your Notion — search, read pages as markdown, query databases, create and append |
+| [fetchbean-posthog](skills/fetchbean-posthog) | Your PostHog analytics — HogQL queries, insights, dashboards, feature flags, error tracking |
 | [fetchbean-skill-creator](skills/fetchbean-skill-creator) | Author a new fetchbean skill for any service in the catalog, from the live tool list |
 
 More are added on demand — [request one](https://fetchbean.com/requests), or if a service is already
