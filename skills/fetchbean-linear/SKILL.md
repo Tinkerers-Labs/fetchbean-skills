@@ -78,6 +78,7 @@ Linear reads accept either a UUID or the human identifier `ENG-123`. **Writes ne
 - `linear_search` (query, first?) free-text search across your issues. Start here for "find the ticket about X".
 - `linear_issues` (first?, team_key?, assigned_to_me?, state_type?, priority?, filter?) list issues, filtered by team, state, assignee, or priority. `assigned_to_me: true` is "my issues"; `state_type` is one of `backlog|unstarted|started|completed|canceled`.
 - `linear_issue` (id? or identifier?) one issue in full by UUID or `ENG-123`, including its state and assignee UUIDs.
+- `linear_comments` (id or identifier, first?) the comment thread on an issue (by UUID or `ENG-123`).
 - `linear_teams` (first?) your teams (id, key, name) — the `teamId` create_issue needs.
 - `linear_workflow_states` (team_key?, first?) a team's workflow states (id, name, type) — the `stateId` to move an issue to. Filter by `team_key`.
 - `linear_users` (first?) workspace members (id, name, email) — the `assigneeId` for creating or reassigning.
