@@ -1,6 +1,6 @@
 {
   "repo": "Tinkerers-Labs/fetchbean-skills",
-  "count": 14,
+  "count": 16,
   "skills": [
     {
       "name": "fetchbean",
@@ -35,6 +35,14 @@
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-canny/SKILL.md"
     },
     {
+      "name": "fetchbean-chatwoot",
+      "description": "Work your Chatwoot support inbox through fetchbean (one key, with your Chatwoot token held encrypted server-side instead of in config). Use when the user asks about their Chatwoot conversations, support inbox, customer chats, contacts, agents, or response times, or says 'my Chatwoot' or 'my support inbox' — for example triaging open conversations, reading a thread, replying or leaving an internal note, resolving or snoozing, assigning to a teammate, labelling, or pulling first-response and resolution reports. Cloud or self-hosted. Requires connecting Chatwoot once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "chatwoot",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-chatwoot",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-chatwoot/SKILL.md"
+    },
+    {
       "name": "fetchbean-dodo",
       "description": "Read and manage your Dodo Payments through fetchbean (one key, with your Dodo token held encrypted server-side instead of in config). Use when the user asks about their Dodo payments, subscriptions, customers, refunds, payouts, disputes, revenue, license keys, or checkout links, or says 'my Dodo' or 'my payments' — for example listing recent payments, refunding one, cancelling a subscription, checking payouts, or creating a payment link. Requires connecting Dodo once in the fetchbean dashboard; calls before that return credential_required.",
       "kind": "provider",
@@ -49,6 +57,14 @@
       "provider": "fireflies",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-fireflies",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-fireflies/SKILL.md"
+    },
+    {
+      "name": "fetchbean-intercom",
+      "description": "Work your Intercom inbox through fetchbean (one key, with your Intercom token held encrypted server-side instead of in config). Use when the user asks about their Intercom conversations, support inbox, customer chats, contacts, leads, companies, tickets, or help center articles, or says 'my Intercom' — for example searching open conversations, reading a thread, replying as a teammate, leaving an internal note, closing or snoozing, assigning, tagging, filing a ticket, or finding the article to send someone. Requires connecting Intercom once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "intercom",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-intercom",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-intercom/SKILL.md"
     },
     {
       "name": "fetchbean-linear",

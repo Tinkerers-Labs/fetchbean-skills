@@ -37,6 +37,8 @@ workspace on first use).
 | [fetchbean-stripe](skills/fetchbean-stripe) | Your Stripe — payments, customers, subscriptions, invoices, refunds, balance, payouts, payment links |
 | [fetchbean-sentry](skills/fetchbean-sentry) | Your Sentry — issues, stacktraces, releases, projects; resolve and assign |
 | [fetchbean-supabase](skills/fetchbean-supabase) | Your Supabase — run SQL, projects, logs (read-only by default) |
+| [fetchbean-chatwoot](skills/fetchbean-chatwoot) | Your Chatwoot support inbox — conversations, replies and notes, resolve, assign, label, reports |
+| [fetchbean-intercom](skills/fetchbean-intercom) | Your Intercom inbox — search conversations and contacts, reply, close, snooze, assign, tickets, help center |
 | [fetchbean-artifacts](skills/fetchbean-artifacts) | Publish a report/dashboard/page and get a shareable URL — from any agent, no connection |
 | [skill-creator](skills/skill-creator) | Author a new fetchbean skill for any service in the catalog, from the live tool list |
 
