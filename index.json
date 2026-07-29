@@ -1,6 +1,6 @@
 {
   "repo": "Tinkerers-Labs/fetchbean-skills",
-  "count": 16,
+  "count": 17,
   "skills": [
     {
       "name": "fetchbean",
@@ -89,6 +89,14 @@
       "provider": "posthog",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-posthog",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-posthog/SKILL.md"
+    },
+    {
+      "name": "fetchbean-replicate",
+      "description": "Run any AI model on Replicate through fetchbean (one key, with your Replicate token held encrypted server-side instead of in config). Use when the user wants to generate an image, video, audio, speech, or text with an open model, upscale or restore a photo, remove a background, transcribe audio, run a specific Replicate model, browse or search the model catalog, check a prediction, or start a fine-tune — or says 'my Replicate'. Requires connecting Replicate once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "replicate",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-replicate",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-replicate/SKILL.md"
     },
     {
       "name": "fetchbean-sentry",
