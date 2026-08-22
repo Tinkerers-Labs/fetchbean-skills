@@ -30,4 +30,12 @@ Then open a PR. Keep each skill's body under ~150 lines — link to `discover`, 
 
 After adding, renaming, or removing a skill, regenerate the machine-readable index (`node scripts/build-index.mjs`) and commit `index.json` — the fetchbean API serves it at `GET /skills`.
 
+Then run `node scripts/check.mjs`. It verifies that every tool a skill names actually exists, that
+`index.json` matches the directory, and that the hub links every skill. A skill naming a tool that
+isn't there is worse than no skill: the agent calls it, gets an error it cannot explain, and has no
+way to tell whether it used the wrong name or the service is broken.
+
+If a skill ships alongside new API tools that are not deployed yet, check it against the build
+instead of production: `TOOLS=../fetchbean/web/public/llms.txt node scripts/check.mjs`.
+
 By contributing you agree your changes are MIT licensed (see [LICENSE](LICENSE)).

@@ -1,6 +1,6 @@
 {
   "repo": "Tinkerers-Labs/fetchbean-skills",
-  "count": 17,
+  "count": 25,
   "skills": [
     {
       "name": "fetchbean",
@@ -43,6 +43,14 @@
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-chatwoot/SKILL.md"
     },
     {
+      "name": "fetchbean-company-diligence",
+      "description": "Research a company through fetchbean — SEC filings and reported financials for US public companies, plus the technical footprint of any company with a domain: subdomains from certificate transparency, DNS and registration records, what the site says about itself, and whether an email address is deliverable. Use when the user asks to look into, research, vet or do diligence on a company, wants its revenue, net income or annual report, asks what a company filed or disclosed, who owns a domain, what infrastructure or subdomains a company runs, or how one company compares to others. Also use for 'check out this company', 'is this legit', 'what do we know about', 'their 10-K', or 'their tech stack'. Needs only a fetchbean key, nothing to connect.",
+      "kind": "capability",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-company-diligence",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-company-diligence/SKILL.md"
+    },
+    {
       "name": "fetchbean-dodo",
       "description": "Read and manage your Dodo Payments through fetchbean (one key, with your Dodo token held encrypted server-side instead of in config). Use when the user asks about their Dodo payments, subscriptions, customers, refunds, payouts, disputes, revenue, license keys, or checkout links, or says 'my Dodo' or 'my payments' — for example listing recent payments, refunding one, cancelling a subscription, checking payouts, or creating a payment link. Requires connecting Dodo once in the fetchbean dashboard; calls before that return credential_required.",
       "kind": "provider",
@@ -75,12 +83,28 @@
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-linear/SKILL.md"
     },
     {
+      "name": "fetchbean-loops",
+      "description": "Work with your Loops lifecycle email through fetchbean — contacts and their properties, mailing lists and audience segments, marketing campaigns, transactional emails, events that trigger automations, and multi-step workflows. Use when the user asks who is on a list, whether someone is subscribed or suppressed, what a campaign said or when it sends, why an onboarding or drip email did or didn't fire, or wants to add a contact, send a transactional email, or trigger an event, and when they say 'my Loops', 'our onboarding emails', 'the welcome sequence', 'the drip', or 'lifecycle email'. Requires connecting Loops once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "loops",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-loops",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-loops/SKILL.md"
+    },
+    {
       "name": "fetchbean-notion",
       "description": "Read and write your Notion workspace through fetchbean (one key, connected by OAuth so no token lives in your config). Use when the user asks about their Notion pages, docs, databases, notes, or wiki, or says 'my Notion' — for example searching the workspace, reading a page as markdown, querying a database, creating a page, or appending content. Requires connecting Notion once in the fetchbean dashboard (one click, pick the pages to share); calls before that return credential_required.",
       "kind": "provider",
       "provider": "notion",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-notion",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-notion/SKILL.md"
+    },
+    {
+      "name": "fetchbean-plain",
+      "description": "Work with your Plain support inbox through fetchbean — threads, conversations, customers, replies, internal notes, labels, assignment and priority, plus the B2B side: tenants, companies, and the tiers and SLAs that decide what response a customer is owed. Use when the user asks about their support queue, an open ticket, what a customer said, who a thread is assigned to, which account a customer belongs to, or what response time a customer is entitled to, and when they say 'my Plain', 'our support inbox', 'the ticket from', 'reply to that customer', or 'what's in the queue'. Requires connecting Plain once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "plain",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-plain",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-plain/SKILL.md"
     },
     {
       "name": "fetchbean-posthog",
@@ -91,12 +115,44 @@
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-posthog/SKILL.md"
     },
     {
+      "name": "fetchbean-pvr",
+      "description": "Find what's playing in Indian cinemas through fetchbean — movies, showtimes, cinemas near you, IMAX and 4DX screenings, seat availability, and ticket prices across 116 cities. Use when the user asks what to watch, what's showing this weekend, where a film is playing, when the next show is, whether a film is out in IMAX, what tickets cost, whether seats are left, or what's releasing soon in India. Also use when they mention 'PVR,' 'INOX,' 'movie tickets,' 'showtimes,' 'cinema near me,' 'book a movie,' or 'what's in theatres.' No connection or account setup needed, just a fetchbean key. Covers the PVR INOX chain in India only — not other chains, not BookMyShow, not other countries — and it reads showtimes rather than booking them.",
+      "kind": "provider",
+      "provider": "pvr",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-pvr",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-pvr/SKILL.md"
+    },
+    {
+      "name": "fetchbean-read-anything",
+      "description": "Read any URL properly through fetchbean and know when a page needs more than a plain fetch. Use when a fetch or web read came back 403, a bot check, a captcha, an empty JavaScript shell, or obvious navigation chrome instead of the article, and when the user asks to read, open, summarise or extract a page, a PDF, an RSS or Atom feed, a JSON endpoint, or a whole site's pages. Also use for pages the built-in reader routinely fails on — x.com, Reddit, LinkedIn, Instagram and other client-rendered sites. Needs only a fetchbean key, nothing to connect. Not for ordinary public pages the built-in WebFetch already handles cleanly.",
+      "kind": "capability",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-read-anything",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-read-anything/SKILL.md"
+    },
+    {
       "name": "fetchbean-replicate",
       "description": "Run any AI model on Replicate through fetchbean (one key, with your Replicate token held encrypted server-side instead of in config). Use when the user wants to generate an image, video, audio, speech, or text with an open model, upscale or restore a photo, remove a background, transcribe audio, run a specific Replicate model, browse or search the model catalog, check a prediction, or start a fine-tune — or says 'my Replicate'. Requires connecting Replicate once in the fetchbean dashboard; calls before that return credential_required.",
       "kind": "provider",
       "provider": "replicate",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-replicate",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-replicate/SKILL.md"
+    },
+    {
+      "name": "fetchbean-research",
+      "description": "Find and resolve academic papers through fetchbean — search arXiv preprints and Crossref's ~160M registered works, look a paper up by DOI or arXiv id, check how many works cite it, and get abstracts with direct PDF links. Use when the user asks for papers or research on a topic, what a specific paper says, who wrote it, when it was published, how influential or cited it is, what is new in a field, or asks to resolve a DOI or an arxiv.org link. Also use for 'find me the paper on', 'is there research about', 'the original transformer paper', 'recent work on', or 'cite this'. Needs only a fetchbean key, nothing to connect. Covers scholarly literature metadata and preprints, not full-text search inside paywalled papers.",
+      "kind": "capability",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-research",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-research/SKILL.md"
+    },
+    {
+      "name": "fetchbean-resend",
+      "description": "Send and inspect email through your Resend account via fetchbean — send or schedule a message, check whether one was delivered, bounced or opened, read email received at your domain, manage templates, contacts, audiences and broadcasts, verify sending domains, and handle suppressions. Use when the user asks to email someone, whether a message arrived, why an email bounced or landed in spam, what was sent to a customer, whether a domain is verified, or wants to schedule or cancel a send, and when they say 'my Resend', 'our transactional email', 'did that email go out', or 'send them an email'. Requires connecting Resend once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "resend",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-resend",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-resend/SKILL.md"
     },
     {
       "name": "fetchbean-sentry",
@@ -129,6 +185,14 @@
       "provider": "supabase",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-supabase",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-supabase/SKILL.md"
+    },
+    {
+      "name": "fetchbean-tailscale",
+      "description": "Administer your Tailscale tailnet through fetchbean — devices and who owns them, users and roles, subnet routes and exit nodes, MagicDNS and split DNS, the access policy file (ACLs, grants, tags, groups), auth keys, device posture, webhooks and log streaming. Use when the user asks which machines are on their tailnet, whether a device is online or its key is expiring, who can reach what, why a host is unreachable, what an ACL allows, or how to approve, tag, rename or remove a node, and when they say 'my tailnet', 'my Tailscale', 'our VPN', 'the exit node', or 'the ACL'. Requires connecting Tailscale once in the fetchbean dashboard; calls before that return credential_required.",
+      "kind": "provider",
+      "provider": "tailscale",
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-tailscale",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-tailscale/SKILL.md"
     },
     {
       "name": "skill-creator",

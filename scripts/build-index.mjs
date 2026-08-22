@@ -24,11 +24,20 @@ function frontmatter(md) {
   return { name: field("name"), description: field("description") };
 }
 
+// Task-shaped skills: named for what the user wants rather than for one vendor, and usually
+// spanning several providers. Not derivable from the name, so they are listed.
+const CAPABILITIES = new Set([
+  "fetchbean-artifacts",
+  "fetchbean-read-anything",
+  "fetchbean-research",
+  "fetchbean-company-diligence",
+]);
+
 /** hub | capability | meta | provider — the taxonomy the display groups by. */
 function classify(name) {
   if (name === "fetchbean") return { kind: "hub", provider: null };
   if (name === "skill-creator") return { kind: "meta", provider: null };
-  if (name === "fetchbean-artifacts") return { kind: "capability", provider: null };
+  if (CAPABILITIES.has(name)) return { kind: "capability", provider: null };
   if (name.startsWith("fetchbean-")) return { kind: "provider", provider: name.slice("fetchbean-".length) };
   return { kind: "other", provider: null };
 }

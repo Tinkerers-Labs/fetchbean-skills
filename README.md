@@ -19,13 +19,16 @@ access to the whole catalog, and a **per-service** skill for anything you use a 
 
 ## Available skills
 
-Start with the **hub** for general access to any of ~400 tools via `discover` + `run`; add a
-**per-service** skill for anything you use a lot (it lists that service's tools and learns your
-workspace on first use).
+Start with the **hub** for general access to any of ~400 tools via `discover` + `run`. Then add
+either a **task** skill (these span several services and are useful before you know which provider
+you need) or a **per-service** skill for anything you use a lot.
 
 | Skill | What it does |
 |-------|--------------|
 | [fetchbean](skills/fetchbean) | **The hub** — one key, find and call any tool. Blocked-page reads, live search, and `my <service>` accounts. Install this first. |
+| [fetchbean-read-anything](skills/fetchbean-read-anything) | **By task** — read any URL properly: articles, JSON, feeds, PDFs, and when a page needs a real browser |
+| [fetchbean-research](skills/fetchbean-research) | **By task** — papers by topic, author, DOI or arXiv id, across arXiv and Crossref |
+| [fetchbean-company-diligence](skills/fetchbean-company-diligence) | **By task** — SEC filings and financials, plus a company's domain, DNS and subdomain footprint |
 | [fetchbean-linear](skills/fetchbean-linear) | Your Linear issues, projects, and teams — search, list, file, update, comment |
 | [fetchbean-canny](skills/fetchbean-canny) | Your Canny feedback — boards, requests, votes, roadmap status, changelog |
 | [fetchbean-fireflies](skills/fetchbean-fireflies) | Your Fireflies meetings — transcripts, action items, soundbites, sharing |
@@ -41,6 +44,11 @@ workspace on first use).
 | [fetchbean-chatwoot](skills/fetchbean-chatwoot) | Your Chatwoot support inbox — conversations, replies and notes, resolve, assign, label, reports |
 | [fetchbean-intercom](skills/fetchbean-intercom) | Your Intercom inbox — search conversations and contacts, reply, close, snooze, assign, tickets, help center |
 | [fetchbean-artifacts](skills/fetchbean-artifacts) | Publish a report/dashboard/page and get a shareable URL — from any agent, no connection |
+| [fetchbean-plain](skills/fetchbean-plain) | Your Plain support inbox — threads, replies, notes, labels, plus tenants, companies, tiers and SLAs |
+| [fetchbean-tailscale](skills/fetchbean-tailscale) | Your Tailscale tailnet — devices, users, routes, DNS, the access policy, auth keys, posture |
+| [fetchbean-loops](skills/fetchbean-loops) | Your Loops lifecycle email — contacts, lists, campaigns, transactional sends, events, workflows |
+| [fetchbean-resend](skills/fetchbean-resend) | Your Resend email — send and schedule, delivery status, templates, contacts, broadcasts, domains |
+| [fetchbean-pvr](skills/fetchbean-pvr) | What's playing in Indian cinemas — showtimes, seats, prices across PVR INOX |
 | [skill-creator](skills/skill-creator) | Author a new fetchbean skill for any service in the catalog, from the live tool list |
 
 More are added on demand — [request one](https://fetchbean.com/requests), or if a service is already
