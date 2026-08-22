@@ -29,6 +29,7 @@ function frontmatter(md) {
 const CAPABILITIES = new Set([
   "fetchbean-artifacts",
   "fetchbean-read-anything",
+  "fetchbean-llms-txt",
   "fetchbean-research",
   "fetchbean-company-diligence",
 ]);

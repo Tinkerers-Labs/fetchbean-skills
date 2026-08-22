@@ -27,6 +27,7 @@ you need) or a **per-service** skill for anything you use a lot.
 |-------|--------------|
 | [fetchbean](skills/fetchbean) | **The hub** — one key, find and call any tool. Blocked-page reads, live search, and `my <service>` accounts. Install this first. |
 | [fetchbean-read-anything](skills/fetchbean-read-anything) | **By task** — read any URL properly: articles, JSON, feeds, PDFs, and when a page needs a real browser |
+| [fetchbean-llms-txt](skills/fetchbean-llms-txt) | **By task** — create or audit a compact linked llms.txt index, with site discovery and link validation |
 | [fetchbean-research](skills/fetchbean-research) | **By task** — papers by topic, author, DOI or arXiv id, across arXiv and Crossref |
 | [fetchbean-company-diligence](skills/fetchbean-company-diligence) | **By task** — SEC filings and financials, plus a company's domain, DNS and subdomain footprint |
 | [fetchbean-linear](skills/fetchbean-linear) | Your Linear issues, projects, and teams — search, list, file, update, comment |

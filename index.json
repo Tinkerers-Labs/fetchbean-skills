@@ -1,6 +1,6 @@
 {
   "repo": "Tinkerers-Labs/fetchbean-skills",
-  "count": 25,
+  "count": 26,
   "skills": [
     {
       "name": "fetchbean",
@@ -81,6 +81,14 @@
       "provider": "linear",
       "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-linear",
       "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-linear/SKILL.md"
+    },
+    {
+      "name": "fetchbean-llms-txt",
+      "description": "Create, audit, and maintain llms.txt navigation indexes with Fetchbean-assisted site discovery and link validation. Use when the user asks to 'create llms.txt', 'fix our llms.txt', 'audit llms.txt', 'add llms-full.txt', 'make an LLM site index', 'improve AI-readable docs', or reduce a giant endpoint/page dump into a compact linked index. Works for sites, docs portals, APIs, and repositories. Needs only a fetchbean key. Does not replace robots.txt, sitemap.xml, access controls, or conventional SEO, and does not guarantee model crawling or citations.",
+      "kind": "capability",
+      "provider": null,
+      "install": "npx skills add Tinkerers-Labs/fetchbean-skills --skill fetchbean-llms-txt",
+      "url": "https://github.com/Tinkerers-Labs/fetchbean-skills/blob/main/skills/fetchbean-llms-txt/SKILL.md"
     },
     {
       "name": "fetchbean-loops",

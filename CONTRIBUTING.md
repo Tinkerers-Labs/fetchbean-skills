@@ -36,6 +36,6 @@ isn't there is worse than no skill: the agent calls it, gets an error it cannot 
 way to tell whether it used the wrong name or the service is broken.
 
 If a skill ships alongside new API tools that are not deployed yet, check it against the build
-instead of production: `TOOLS=../fetchbean/web/public/llms.txt node scripts/check.mjs`.
+instead of production: `TOOLS=../fetchbean/web/public/llms-full.txt node scripts/check.mjs`.
 
 By contributing you agree your changes are MIT licensed (see [LICENSE](LICENSE)).

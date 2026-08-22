@@ -64,6 +64,7 @@ For a service you use a lot, install its dedicated skill instead of leaning on `
 **By task** — these span several services and are the ones worth installing even if you don't know which provider you need:
 
 - **fetchbean-read-anything** — read any URL properly, and know when a page needs a real browser
+- **fetchbean-llms-txt** — create or audit a compact linked llms.txt index from a site's public surface
 - **fetchbean-research** — papers by topic, author or DOI, across arXiv and Crossref
 - **fetchbean-company-diligence** — SEC filings and financials, plus a company's domain and infrastructure footprint
 - **fetchbean-artifacts** — publish a page and get a shareable link

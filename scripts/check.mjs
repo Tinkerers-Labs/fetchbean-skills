@@ -8,24 +8,32 @@
 //      which is why this check exists.
 //
 //   node scripts/check.mjs                                    # against production
-//   TOOLS=../fetchbean/web/public/llms.txt node scripts/check.mjs   # against an undeployed build
+//   TOOLS=../fetchbean/web/public/llms-full.txt node scripts/check.mjs   # against an undeployed build
 import { readdirSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-// llms.txt is the only public surface carrying the flat `provider_tool` names the HTTP API actually
+// llms-full.txt is the public surface carrying the flat `provider_tool` names the HTTP API actually
 // routes on. /catalog exposes each op's endpoint (`/threads/reply`) but never its id, and the two do
 // not line up — plain.reply_to_thread is served at /v1/plain_reply_to_thread, not /v1/plain_threads_reply.
-const TOOLS = process.env.TOOLS ?? "https://fetchbean.com/llms.txt";
+const TOOLS = process.env.TOOLS ?? "https://fetchbean.com/llms-full.txt";
 
 // A path rather than a URL reads a local build, so a skill can be checked against the API it is
 // about to ship alongside rather than against what is currently deployed.
 let listing;
+let listingSource = TOOLS;
 if (/^https?:\/\//.test(TOOLS)) {
-  const res = await fetch(TOOLS);
+  let res = await fetch(TOOLS);
+  // Rollout compatibility: the short index and llms-full.txt may not deploy atomically. Production's
+  // former llms.txt is itself the complete generated inventory, so it remains authoritative until
+  // the new full path exists. An explicit TOOLS override never falls back.
+  if (!res.ok && !process.env.TOOLS && res.status === 404) {
+    listingSource = "https://fetchbean.com/llms.txt";
+    res = await fetch(listingSource);
+  }
   if (!res.ok) {
-    console.error(`could not read the tool list at ${TOOLS}: ${res.status}`);
+    console.error(`could not read the tool list at ${listingSource}: ${res.status}`);
     process.exit(2);
   }
   listing = await res.text();
@@ -34,7 +42,7 @@ if (/^https?:\/\//.test(TOOLS)) {
 }
 const tools = new Set([...listing.matchAll(/POST \/v1\/([a-z0-9_]+)/g)].map(([, name]) => name));
 if (tools.size < 100) {
-  console.error(`only ${tools.size} tools parsed from ${TOOLS} — the format probably changed`);
+  console.error(`only ${tools.size} tools parsed from ${listingSource} — the format probably changed`);
   process.exit(2);
 }
 // Only names containing an underscore contribute a provider prefix: there are top-level aliases
