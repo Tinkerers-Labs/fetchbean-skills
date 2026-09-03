@@ -1,8 +1,8 @@
 # fetchbean skills
 
-Agent skills for [fetchbean](https://fetchbean.com) — one key for ~400 tools across 40+ services:
-live web tools and your own connected SaaS accounts, with each service's token held encrypted
-server-side instead of sitting in your config.
+Agent skills for [fetchbean](https://fetchbean.com): one key for 1,000+ tools across ~100 providers,
+including managed web tools and your connected SaaS accounts. Provider credentials are stored
+encrypted server-side instead of sitting in your agent config.
 
 Each skill is a `SKILL.md` that any agent (Claude Code, Codex, Cursor, or anything that reads skill
 files) loads to know when and how to reach a set of fetchbean tools. Install the **hub** for general
@@ -10,22 +10,22 @@ access to the whole catalog, and a **per-service** skill for anything you use a 
 
 ## Why through fetchbean
 
-- **One key, not one per service.** Your Linear, Canny, and Fireflies tokens live encrypted in
+- **One runtime key across services.** Your Linear, Canny, and Fireflies tokens live encrypted in
   fetchbean, never in a dozen `settings.json` files.
-- **Curated, normalized tools.** Clean inputs and stable JSON out, on prepaid credits you can't
-  overspend. Provider failures and timeouts are billed zero.
-- **Always current.** The skills point at the live catalog rather than hardcoding it —
-  `GET https://api.fetchbean.com/discover?q=<task>` confirms any tool, any time (no key needed).
+- **Clear tool contracts.** Inputs are validated against each listed operation. Provider failures and
+  timeouts are billed zero.
+- **Check the current catalog.** `GET https://api.fetchbean.com/discover?q=<task>` confirms the tool,
+  parameters, and pricing model before a call, with no key needed.
 
 ## Available skills
 
-Start with the **hub** for general access to any of ~400 tools via `discover` + `run`. Then add
+Start with the **hub** for general access to 1,000+ listed tools via `discover` + `run`. Then add
 either a **task** skill (these span several services and are useful before you know which provider
 you need) or a **per-service** skill for anything you use a lot.
 
 | Skill | What it does |
 |-------|--------------|
-| [fetchbean](skills/fetchbean) | **The hub** — one key, find and call any tool. Blocked-page reads, live search, and `my <service>` accounts. Install this first. |
+| [fetchbean](skills/fetchbean) | **The hub**: one key to find and call listed tools. Blocked-page reads, live search, and `my <service>` accounts. Install this first. |
 | [fetchbean-read-anything](skills/fetchbean-read-anything) | **By task** — read any URL properly: articles, JSON, feeds, PDFs, and when a page needs a real browser |
 | [fetchbean-llms-txt](skills/fetchbean-llms-txt) | **By task** — create or audit a compact linked llms.txt index, with site discovery and link validation |
 | [fetchbean-research](skills/fetchbean-research) | **By task** — papers by topic, author, DOI or arXiv id, across arXiv and Crossref |
@@ -85,11 +85,11 @@ printf '%s' 'fb_...' > ~/.config/fetchbean/key
 chmod 600 ~/.config/fetchbean/key
 ```
 
-That's the whole setup. Connect the matching service in the dashboard, and the skill's tools work.
+Managed tools work immediately. For tools that act on your data, connect the matching service once in the dashboard.
 
 ## Self-personalizing
 
-Each skill ships generic, then learns your workspace on first use: a one-time **Personalize** step reads
+Skills with reusable workspace context can learn it on first use: a one-time **Personalize** step reads
 your boards / teams / channels (with their ids) and caches them in a local `workspace.md` beside the skill,
 so the agent can act on things by name without repeated lookups. That file is generated from your own
 account, holds workspace-specific ids and names, and is **git-ignored — never committed**.

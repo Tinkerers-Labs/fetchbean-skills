@@ -17,7 +17,7 @@ printf '%s' 'fb_...' > ~/.config/fetchbean/key
 chmod 600 ~/.config/fetchbean/key
 ```
 
-There is nothing to connect for anything below except `ahrefs_*`, which needs an Ahrefs key connected at https://fetchbean.com/app → Connections.
+Everything below works without a separate provider connection. The Ahrefs tools can also use a connected Ahrefs key; check `discover` for current managed and connected pricing.
 
 ## Calling tools
 
@@ -51,7 +51,7 @@ The fetchbean MCP server (`https://api.fetchbean.com/mcp`) is an alternative tra
 - `fetchbean /email/deliverability` (email, dns?, typo?, disposable?, freeProvider?) — whether an address is real and deliverable, and whether the domain is disposable.
 - `logodev_search` (q) — brand and logo lookup by name or domain.
 - `exa_search` (query, numResults?) — news, funding and coverage that isn't on the company's own site.
-- `ahrefs_domain` (needs a connected Ahrefs key) — domain rating and backlink profile, as a rough proxy for public presence.
+- `ahrefs_domain_rating` (domain): Domain Rating as a rough proxy for backlink strength. Keep the attribution returned with the result next to any displayed rating.
 
 ## Worked pattern
 
